@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            background:red;
+        }
+        .two{
+            background:blue;
+        }
+        .three{
+            background:black;
+        }
+        .four{
+            background:orange;
+        }
+        .box{
+            display:flex;
+        }
+        .box div{
+            text-align:center;
+            color:white;
+            height:60px;
+            line-height:60px;
+            flex-direction:row;
+        }
+        @media screen and (min-width: 1200px){
+            .box div{
+                width:1000px;
+                justify-content:space-between;
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1200px){
+            .box{
+                flex-wrap:wrap;
+            }
+            .one{
+                flex-basis:100%;
+            }
+            .two{
+                flex:1;
+            }
+            .three{
+                flex:1;
+            }
+            .four{
+                flex:1;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:992px){
+            .box{
+                flex-wrap:wrap;
+            }
+            .box div{
+                flex-basis:50%;
+            }
+            
+        }
+        @media screen and (max-width: 768px){
+            .box{
+                flex-wrap:wrap;
+            }
+            .box div{
+                flex-basis:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+    </div>
+</body>
+</html>
